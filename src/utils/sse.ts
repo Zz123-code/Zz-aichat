@@ -9,21 +9,13 @@ export const streamChat = async (
     const { messages } = params;
 
     try {
-<<<<<<< HEAD
-        const response = await fetch('/api/chat/stream', {
-=======
-        const response = await fetch('/server', {
->>>>>>> 972aa27e5b562ab5e04f0f21848bdee34872f289
+        const response = await fetch('http://localhost:3001/api/chat/stream', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-<<<<<<< HEAD
-            body: JSON.stringify({ messages,
-=======
             body: JSON.stringify({
                 messages,
->>>>>>> 972aa27e5b562ab5e04f0f21848bdee34872f289
             })
         });
 
@@ -81,8 +73,4 @@ export const streamChat = async (
         const errMsg = error instanceof Error ? error.message : '未知错误';
         onError(errMsg);
     }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 972aa27e5b562ab5e04f0f21848bdee34872f289
