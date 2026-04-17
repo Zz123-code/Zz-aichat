@@ -9,7 +9,7 @@ export const streamChat = async (
     const { messages } = params;
 
     try {
-        const response = await fetch('/api/chat/stream', {
+        const response = await fetch('/server', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
